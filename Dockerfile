@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 RUN git clone https://github.com/LainWireless/docker_django_tutorial.git /usr/src/app 
 RUN pip --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org install --root-user-action=ignore -r requirements.txt
 RUN mkdir static
-ADD ./django_polls.sh /usr/src/app/django.sh
+ADD ./django_polls.sh /usr/src/app/django_polls.sh
 RUN chmod +x /usr/src/app/django_polls.sh
 ENV ALLOWED_HOSTS=*
 ENV HOST=mariadb
