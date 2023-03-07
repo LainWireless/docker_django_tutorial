@@ -1,8 +1,8 @@
 version: '3.7'
 services:
   django-tutorial:
-    container_name: django-tutorial
-    image: lainwireless/django_tutorial:latest
+    container_name: django-tutorial-jenkins
+    image: lainwireless/django_tutorial_jenkins:latest
     restart: always
     environment:
       ALLOWED_HOSTS: "*"
@@ -14,11 +14,11 @@ services:
       DJANGO_SUPERUSER_USERNAME: admin
       DJANGO_SUPERUSER_EMAIL: admin@example.org
     ports:
-      - 8084:8006
+      - 8088:8006
     depends_on:
       - db_django
   db_django:
-    container_name: bd_mariadb_django
+    container_name: bd_mariadb_django_jenkins
     image: mariadb
     restart: always
     environment:
@@ -27,6 +27,6 @@ services:
       MARIADB_USER: django
       MARIADB_PASSWORD: django
     volumes:
-      - mariadb_data_django:/var/lib/mysql
+      - mariadb_data_django_jenkins:/var/lib/mysql
 volumes:
-    mariadb_data_django:
+    mariadb_data_django_jenkins:
