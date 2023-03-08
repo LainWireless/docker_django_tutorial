@@ -14,7 +14,7 @@ services:
       DJANGO_SUPERUSER_USERNAME: admin
       DJANGO_SUPERUSER_EMAIL: admin@example.org
     ports:
-      - 8087:8006
+      - 8088:8006
     depends_on:
       - db_django
   db_django:
