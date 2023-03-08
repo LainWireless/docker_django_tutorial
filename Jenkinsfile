@@ -62,8 +62,8 @@ pipeline {
                     stage ('SSH') {
                         steps{
                             sshagent(credentials : ['SSH_ROOT']) {
-                                sh 'ssh -o StrictHostKeyChecking=no root@ivanasir2.ataraxia.com wget https://raw.githubusercontent.com/LainWireless/docker_django_tutorial/main/docker-compose.yaml -O docker-compose.yaml'
-                                sh 'ssh -o StrictHostKeyChecking=no root@ivanasir2.ataraxia.com docker-compose up -d --force-recreate'
+                                sh 'ssh -o StrictHostKeyChecking=no root@ataraxia.ivanasir2.com wget https://raw.githubusercontent.com/LainWireless/docker_django_tutorial/main/docker-compose.yaml -O docker-compose.yaml'
+                                sh 'ssh -o StrictHostKeyChecking=no root@ataraxia.ivanasir2.com docker-compose up -d --force-recreate'
                             }
                         }
                     }
