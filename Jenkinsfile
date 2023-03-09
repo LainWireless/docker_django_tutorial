@@ -14,7 +14,7 @@ pipeline {
             stages {
                 stage('Clonacion') {
                     steps {
-                        git branch:'main',url:'https://github.com/LainWireless/django_tutorial_desarrollo.git'
+                        git branch:'main',url:'https://github.com/LainWireless/docker_django_tutorial.git'
                     }
                 }
                 stage('Instalacion') {
@@ -56,7 +56,7 @@ pipeline {
                     }
                     stage('RemoveImage') {
                         steps {
-                            sh "docker rmi $IMAGEN:latest"
+                            sh "docker rmi -f $IMAGEN:latest"
                         }
                     }
                     stage ('SSH') {
