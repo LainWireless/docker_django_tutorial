@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       ALLOWED_HOSTS: "*"
-      HOST: bd_mariadb_django
+      HOST: bd_mariadb_django_jenkins
       USUARIO: django
       CONTRA: django
       BASE_DATOS: django
