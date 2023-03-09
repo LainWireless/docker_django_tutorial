@@ -38,6 +38,11 @@ pipeline {
                             git branch:'main',url:'https://github.com/LainWireless/docker_django_tutorial.git'
                         }
                     }
+                    stage ('Prebuild sin caché') {
+                        steps {
+                            sh 'docker build --no-cache -t $IMAGEN:latest .'
+                        }
+                    }
                     stage('BuildImage') {
                         steps {
                             script {
