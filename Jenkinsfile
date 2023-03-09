@@ -14,7 +14,7 @@ pipeline {
             stages {
                 stage('Clonacion') {
                     steps {
-                        git branch:'main',url:'https://github.com/LainWireless/docker_django_tutorial.git'
+                        git branch:'main',url:'https://github.com/LainWireless/django_tutorial_desarrollo.git'
                     }
                 }
                 stage('Instalacion') {
